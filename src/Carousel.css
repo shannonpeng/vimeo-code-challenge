@@ -1,0 +1,72 @@
+/* Carousel */
+
+.Carousel {
+	width: 100vw;
+	height: 100vh;
+	overflow-y: hidden;
+	background: black;
+}
+
+.Carousel .Panel {
+	height: 100%;
+}
+
+.Carousel .arrow {
+	top: 45vh;
+	width: 80px;
+	height: 80px;
+	border-radius: 50% 50%;
+	border: 2px solid rgba(76,172,233, 0.2);
+	color: rgb(76,172,233);
+	text-align: center;
+	position: fixed;
+	opacity: 0.6;
+	transition: 0.2s;
+}
+.Carousel .arrow:hover {
+	opacity: 0.8;
+	border: 2px solid rgba(76,172,233, 0.6);
+	cursor: pointer;
+	transition: 0.2s;
+}
+.Carousel .arrow.left-arrow {
+	left: 5vw;
+}
+.Carousel .arrow.right-arrow {
+	right: 5vw;
+}
+
+/* Sliding Animations */
+
+.enterFromLeft-enter {
+	left: -100%;
+}
+.enterFromLeft-enter.enterFromLeft-enter-active {
+	left: 0;
+	transition: 300ms;
+}
+
+.enterFromRight-enter {
+	left: 100%;
+}
+.enterFromRight-enter.enterFromRight-enter-active {
+	left: 0;
+	transition: 300ms;
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 1200px) {
+	.Carousel .arrow {
+		top: 10vh;
+		width: 40px;
+		height: 40px;
+		font-size: 50%;
+	}
+	.Carousel .arrow.left-arrow {
+		left: 25vw;
+	}
+	.Carousel .arrow.right-arrow {
+		right: 25vw;
+	}
+}
